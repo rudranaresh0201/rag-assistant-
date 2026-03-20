@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply m-0 text-slate-100 antialiased;
+    font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(circle at 15% 10%, rgba(34, 211, 238, 0.08), transparent 35%),
+      radial-gradient(circle at 85% 80%, rgba(59, 130, 246, 0.08), transparent 35%),
+      linear-gradient(180deg, #020617 0%, #020617 40%, #000000 100%);
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.35s ease-out both;
+  }
+
+  .animate-fade-in {
+    animation: fadeUp 0.28s ease-out both;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .chat-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+  }
+
+  .chat-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .chat-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background: rgba(148, 163, 184, 0.3);
+  }
+
+  .chat-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
