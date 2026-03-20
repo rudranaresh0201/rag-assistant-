@@ -1,52 +1,30 @@
-&#x20;**RAG Assistant**
+**BAJA RAG Assistant**
+
+&#x20;**BAJA RAG Assistant**
 
 
 
-**A full-stack Retrieval-Augmented Generation (RAG) system that enables users to query BAJA SAE rulebooks and research documents using natural language.**
-
-
-
-**Built with FastAPI, React, ChromaDB, and a local LLM (Ollama).**
-
-
-
-&#x20;**Features**
-
-
-
-&#x20;**Semantic search over PDFs (rulebooks and research papers)**
-
-&#x20;**Local LLM inference using Ollama (no external API required)**
-
-&#x20;**Source-aware answers with multiple retrieved document chunks**
-
-&#x20;**Displays top-k sources (e.g., Chunk 1, Chunk 2) used to generate the answer**
-
-&#x20;**Confidence scoring for retrieved results**
-
-&#x20;**Fast retrieval using Chroma vector database**
-
-&#x20;**Clean React-based chat interface**
-
-&#x20;**End-to-end RAG pipeline (ingestion → retrieval → generation)**
+**!\[RAG Demo](assets/screenshots/rag-frontend.png)**
 
 
 
 
 
+**A full-stack Retrieval-Augmented Generation (RAG) system for querying BAJA SAE rulebooks and research documents using natural language. Built with FastAPI, React, ChromaDB, and a local LLM via Ollama — no external API required.**
 
 
-&#x20;**Demo**
+
+**What it does**
+
+**This system retrieves information from multiple sources, including a research paper https://arxiv.org/pdf/2108.05877 and BAJA SAE rulebook** 
+
+&#x20;**user Asks questions like "What are the safety rules in BAJA?" and gets back a grounded answer with the exact document chunks that were used to generate it. Every response includes a confidence score and labeled source references (Chunk 1, Chunk 2, etc.), so you always know where the information came from.**
 
 &#x20;**Demo**
 
 
 
-**## Demo**
-
-
-
-**### Chat Interface**
+**Chat Interface**
 
 
 
@@ -54,7 +32,7 @@
 
 
 
-**### Retrieved Sources (RAG Evidence)**
+&#x20;**Source Retrieval**
 
 
 
@@ -62,207 +40,165 @@
 
 
 
-**### Backend API Response**
+&#x20;**Backend API Response**
 
 
 
-**!\[RAG Backend](assets/screenshots/rag-backend.png)User Query**
+**!\[RAG Backend](assets/screenshots/rag-backend.png)**
 
-&#x20;  **↓**
+
+
+
+
+**Natural language search over PDFs (rulebooks and research papers)**
+
+**Local inference using Ollama with the phi3 model — everything runs on your machine**
+
+**Source-aware answers with multiple retrieved document chunks displayed per response**
+
+**Confidence scoring for retrieved results**
+
+**Fast semantic retrieval via ChromaDB vector database**
+
+**Clean React chat interface built with Vite and Tailwind CSS**
+
+**End-to-end RAG pipeline — from document ingestion through retrieval to generation**
+
+
+
+
+
+**Architecture**
+
+**User Query**
+
+&#x20;   **↓**
 
 **React Frontend**
 
-&#x20;  **↓**
+&#x20;   **↓**
 
 **FastAPI Backend (/query)**
 
-&#x20;  **↓**
+&#x20;   **↓**
 
 **Retriever (ChromaDB)**
 
-&#x20;  **↓**
+&#x20;   **↓**
 
 **Context Builder**
 
-&#x20;  **↓**
+&#x20;   **↓**
 
-**LLM (Ollama - phi3)**
+**LLM (Ollama — phi3)**
 
-&#x20;  **↓**
+&#x20;   **↓**
 
-**Answer + Sources + Confidence**
-
-**```**
-
-
-
-
+**Answer + Sources + Confidence Score**
 
 
 
 **How Retrieval Works**
 
-
-
-**For each user query:**
-
-
-
-**1. The system retrieves the top-k most relevant chunks from the document corpus**
-
-**2. Each chunk is labeled (e.g., Chunk 1, Chunk 2)**
-
-**3. These chunks are passed as context to the LLM**
-
-**4. The final answer is generated using only this retrieved context**
+**For each query, the system:**
 
 
 
-**This ensures:**
+**Converts your question into a vector embedding**
+
+**Retrieves the top-k most semantically relevant chunks from the document corpus**
+
+**Labels each chunk (Chunk 1, Chunk 2...) and passes them as context to the LLM**
+
+**Generates a grounded answer using only what it actually found**
 
 
 
-&#x20;**Transparency (users can see exactly where answers come from)**
-
-**Reduced hallucination**
-
-**\*Traceability of information sources**
-
-
+**This keeps answers traceable and reduces hallucination — the model can only reference what it actually retrieved.**
 
 
 
 **Tech Stack**
 
+**backend : fastapi, python**
 
+**vector database: chromadb**
 
-&#x20;**Backend**
+**embeddings: sentence Transformers**
 
+**LLM: Ollama phi3**
 
-
-**FastAPI**
-
-&#x20;**Python**
-
-&#x20;**ChromaDB**
-
-&#x20;**Sentence Transformers**
-
-&#x20;**Ollama (phi3)**
-
-
-
-&#x20;**Frontend**
-
-
-
-&#x20;**React (Vite)**
-
-&#x20;**Tailwind CSS**
+**frontend: react(vite) , Tailwind css**
 
 
 
 
 
-&#x20;**Setup Instructions**
-
-
-
-&#x20;**1. Clone the repository**
 
 
 
 
+**1. Clone the repo**
 
-**git clone https://github.com/rudranaresh0201/rag-assistant-.git**
+**bashgit clone https://github.com/rudranaresh0201/rag-assistant-.git**
 
 **cd rag-assistant-**
 
+**2. Backend**
 
-
-
-
-
-
-
-
-
-
-&#x20;**2. Backend setup**
-
-
-
-
-
-**pip install -r requirements.txt**
+**bashpip install -r requirements.txt**
 
 **uvicorn api:app --reload**
 
-&#x20;**3. Run Ollama**
+**3. Start Ollama**
 
-**ollama run phi3**
+**bashollama run phi3**
 
-**4. Frontend setup**
+**4. Frontend**
 
-**cd frontend**
+**bashcd frontend**
 
 **npm install**
 
 **npm run dev**
 
-&#x20;**5. Open the application**
+**5. Open the app**
 
 **http://localhost:5173**
 
 
 
-**Example Query**
+**Example**
 
-
-
-**"What are safety rules in BAJA?"**
-
-
+**Query: "What are safety rules in BAJA?"**
 
 **Returns:**
 
-&#x20;**Generated answer**
-
-**Retrieved document chunks (e.g., Chunk 1, Chunk 2)**
-
-**Confidence score**
 
 
+**A generated answer grounded in the retrieved chunks**
 
+**Labeled source excerpts (Chunk 1, Chunk 2...)**
 
-
-
-
-**Future Improvements**
-
-
-
-&#x20;**Deployment (Render for backend, Vercel for frontend)**
-
-&#x20;**Improved reranking using cross-encoders**
-
-**Multi-document upload interface**
-
-**Voice-based querying**
-
-&#x20;**Performance optimization and caching**
+**A confidence score for the retrieval**
 
 
 
 
 
+**What's Next**
+
+**A few things I'm planning to build out:**
 
 
-**Author**
 
+**Deployment — Render for the backend, Vercel for the frontend**
 
+**Reranking — cross-encoder reranking for better result ordering**
 
-**Rudra Naresh**
+**Multi-document upload UI — drag-and-drop interface for adding new PDFs**
 
-**VJTI Electronics SY**
+**Voice querying — speech-to-text input for hands-free use**
+
+**Caching layer — avoid re-embedding repeated queries**
 
