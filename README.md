@@ -10,33 +10,35 @@
 
 
 
-**---**
+&#x20;**Features**
 
 
 
-**## Features**
+&#x20;**Semantic search over PDFs (rulebooks and research papers)**
+
+&#x20;**Local LLM inference using Ollama (no external API required)**
+
+&#x20;**Source-aware answers with multiple retrieved document chunks**
+
+&#x20;**Displays top-k sources (e.g., Chunk 1, Chunk 2) used to generate the answer**
+
+&#x20;**Confidence scoring for retrieved results**
+
+&#x20;**Fast retrieval using Chroma vector database**
+
+&#x20;**Clean React-based chat interface**
+
+&#x20;**End-to-end RAG pipeline (ingestion → retrieval → generation)**
 
 
 
-**\* Semantic search over PDFs (rulebooks and research papers)**
-
-**\* Local LLM inference using Ollama (no external API required)**
-
-**\* Source-aware answers with multiple retrieved document chunks**
-
-**\* Displays top-k sources (e.g., Chunk 1, Chunk 2) used to generate the answer**
-
-**\* Confidence scoring for retrieved results**
-
-**\* Fast retrieval using Chroma vector database**
-
-**\* Clean React-based chat interface**
-
-**\* End-to-end RAG pipeline (ingestion → retrieval → generation)**
 
 
 
-**---**
+
+&#x20;**Demo**
+
+&#x20;**Demo**
 
 
 
@@ -46,11 +48,15 @@
 
 **### Chat Interface**
 
+
+
 **!\[RAG Frontend](assets/screenshots/rag-frontend.png)**
 
 
 
 **### Retrieved Sources (RAG Evidence)**
+
+
 
 **!\[Source Retrieval](assets/screenshots/source-retrieval.png)**
 
@@ -58,19 +64,9 @@
 
 **### Backend API Response**
 
-**!\[RAG Backend](assets/screenshots/rag-backend.png)**
-
-**---**
 
 
-
-**## Architecture**
-
-
-
-**```**
-
-**User Query**
+**!\[RAG Backend](assets/screenshots/rag-backend.png)User Query**
 
 &#x20;  **↓**
 
@@ -100,11 +96,11 @@
 
 
 
-**---**
 
 
 
-**## How Retrieval Works**
+
+**How Retrieval Works**
 
 
 
@@ -126,113 +122,87 @@
 
 
 
-**\* Transparency (users can see exactly where answers come from)**
+&#x20;**Transparency (users can see exactly where answers come from)**
 
-**\* Reduced hallucination**
+**Reduced hallucination**
 
-**\* Traceability of information sources**
-
-
-
-**---**
+**\*Traceability of information sources**
 
 
 
-**## Tech Stack**
+
+
+**Tech Stack**
 
 
 
-**### Backend**
+&#x20;**Backend**
 
 
 
-**\* FastAPI**
+**FastAPI**
 
-**\* Python**
+&#x20;**Python**
 
-**\* ChromaDB**
+&#x20;**ChromaDB**
 
-**\* Sentence Transformers**
+&#x20;**Sentence Transformers**
 
-**\* Ollama (phi3)**
-
-
-
-**### Frontend**
+&#x20;**Ollama (phi3)**
 
 
 
-**\* React (Vite)**
-
-**\* Tailwind CSS**
+&#x20;**Frontend**
 
 
 
-**---**
+&#x20;**React (Vite)**
+
+&#x20;**Tailwind CSS**
 
 
 
-**## Setup Instructions**
+
+
+&#x20;**Setup Instructions**
 
 
 
-**### 1. Clone the repository**
+&#x20;**1. Clone the repository**
 
 
 
-**```**
+
 
 **git clone https://github.com/rudranaresh0201/rag-assistant-.git**
 
 **cd rag-assistant-**
 
-**```**
 
 
 
-**---**
 
 
 
-**### 2. Backend setup**
 
 
 
-**```**
+
+&#x20;**2. Backend setup**
+
+
+
+
 
 **pip install -r requirements.txt**
 
 **uvicorn api:app --reload**
 
-**```**
-
-
-
-**---**
-
-
-
-**### 3. Run Ollama**
-
-
-
-**```**
+&#x20;**3. Run Ollama**
 
 **ollama run phi3**
 
-**```**
-
-
-
-**---**
-
-
-
-**### 4. Frontend setup**
-
-
-
-**```**
+**4. Frontend setup**
 
 **cd frontend**
 
@@ -240,31 +210,13 @@
 
 **npm run dev**
 
-**```**
-
-
-
-**---**
-
-
-
-**### 5. Open the application**
-
-
-
-**```**
+&#x20;**5. Open the application**
 
 **http://localhost:5173**
 
-**```**
 
 
-
-**---**
-
-
-
-**## Example Query**
+**Example Query**
 
 
 
@@ -274,45 +226,43 @@
 
 **Returns:**
 
+&#x20;**Generated answer**
 
+**Retrieved document chunks (e.g., Chunk 1, Chunk 2)**
 
-**\* Generated answer**
-
-**\* Retrieved document chunks (e.g., Chunk 1, Chunk 2)**
-
-**\* Confidence score**
-
-
-
-**---**
+**Confidence score**
 
 
 
-**## Future Improvements**
 
 
 
-**\* Deployment (Render for backend, Vercel for frontend)**
 
-**\* Improved reranking using cross-encoders**
-
-**\* Multi-document upload interface**
-
-**\* Voice-based querying**
-
-**\* Performance optimization and caching**
+**Future Improvements**
 
 
 
-**---**
+&#x20;**Deployment (Render for backend, Vercel for frontend)**
+
+&#x20;**Improved reranking using cross-encoders**
+
+**Multi-document upload interface**
+
+**Voice-based querying**
+
+&#x20;**Performance optimization and caching**
 
 
 
-**## Author**
+
+
+
+
+**Author**
 
 
 
 **Rudra Naresh**
 
-**VJTI Electronics SY** 
+**VJTI Electronics SY**
 
