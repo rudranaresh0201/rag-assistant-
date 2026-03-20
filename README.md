@@ -68,6 +68,10 @@
 
 
 
+**----**
+
+
+
 **Demo**
 
 
@@ -104,35 +108,33 @@
 
 
 
-**User Query**
+**User Query**  
 
-**↓**
+**↓**  
 
-**React Frontend**
+**React Frontend**  
 
-**↓**
+**↓**  
 
-**FastAPI Backend (/query)**
+**FastAPI Backend (/query)**  
 
-**↓**
+**↓**  
 
-**Retriever (ChromaDB)**
+**Retriever (ChromaDB)**  
 
-**↓**
+**↓**  
 
-**Context Builder**
+**Context Builder**  
 
-**↓**
+**↓**  
 
-**LLM (Ollama — phi3)**
+**LLM (Ollama — phi3)**  
 
-**↓**
+**↓**  
 
-**Answer + Sources + Score**
+**Answer + Sources + Score**  
 
 
-
-**---**
 
 
 
