@@ -6,15 +6,19 @@
 
 
 
-**!\[Frontend](assets/screenshots/rag-frontend.png)**
-
-**!\[Backend](assets/screenshots/rag-backend.png)**
-
-**!\[Retrieval](assets/screenshots/source-retrieval.png)**
+**!\[Frontend](https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/rag-frontend.png)**
 
 
 
-**!A full-stack Retrieval-Augmented Generation (RAG) system for querying BAJA SAE rulebooks and research documents using natural language. Built with FastAPI, React, ChromaDB, and a local LLM via Ollama.**
+**!\[Backend](https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/rag-backend.png)**
+
+
+
+**!\[Retrieval](https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/source-retrieval.png)**
+
+**!**
+
+**A full-stack Retrieval-Augmented Generation (RAG) system for querying BAJA SAE rulebooks and research documents using natural language. Built with FastAPI, React, ChromaDB, and a local LLM via Ollama.**
 
 
 
