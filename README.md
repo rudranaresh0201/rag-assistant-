@@ -84,36 +84,6 @@
 
 
 
-**Demo**
-
-
-
-**Chat Interface**
-
-
-
-**!\[RAG Frontend](assets/screenshots/rag-frontend.png)**
-
-
-
-**Source Retrieval**
-
-
-
-**!\[Source Retrieval](assets/screenshots/source-retrieval.png)**
-
-
-
-**Backend API Response**
-
-
-
-**!\[RAG Backend](assets/screenshots/rag-backend.png)**
-
-
-
-**---**
-
 
 
 **Architecture**
