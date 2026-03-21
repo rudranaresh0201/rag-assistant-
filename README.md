@@ -1,12 +1,20 @@
-**BAJA RAG Assistant**
+
+
+&#x20;**RAG Assistant**
+
+**# BAJA RAG Assistant**
 
 
 
-**!\[RAG Demo](assets/screenshots/rag-frontend.png)**
+**!\[Frontend](assets/screenshots/rag-frontend.png)**
+
+**!\[Backend](assets/screenshots/rag-backend.png)**
+
+**!\[Retrieval](assets/screenshots/source-retrieval.png)**
 
 
 
-**A full-stack Retrieval-Augmented Generation (RAG) system for querying BAJA SAE rulebooks and research documents using natural language. Built with FastAPI, React, ChromaDB, and a local LLM via Ollama.**
+**!A full-stack Retrieval-Augmented Generation (RAG) system for querying BAJA SAE rulebooks and research documents using natural language. Built with FastAPI, React, ChromaDB, and a local LLM via Ollama.**
 
 
 
@@ -108,31 +116,31 @@
 
 
 
-**User Query**  
+**User Query**
 
-**↓**  
+**↓**
 
-**React Frontend**  
+**React Frontend**
 
-**↓**  
+**↓**
 
-**FastAPI Backend (/query)**  
+**FastAPI Backend (/query)**
 
-**↓**  
+**↓**
 
-**Retriever (ChromaDB)**  
+**Retriever (ChromaDB)**
 
-**↓**  
+**↓**
 
-**Context Builder**  
+**Context Builder**
 
-**↓**  
+**↓**
 
-**LLM (Ollama — phi3)**  
+**LLM (Ollama — phi3)**
 
-**↓**  
+**↓**
 
-**Answer + Sources + Score**  
+**Answer + Sources + Score**
 
 
 
@@ -273,6 +281,4 @@
 **Built by Rudra Naresh**
 
 **Electronics Engineering, VJTI**
-
-
 
