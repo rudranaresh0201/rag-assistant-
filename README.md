@@ -1,5 +1,3 @@
-
-
 &#x20;**RAG Assistant**
 
 **# BAJA RAG Assistant**
@@ -26,29 +24,15 @@
 
 
 
-**What it does**
+**# 🚀 BAJA RAG Assistant**
 
 
 
-**This system retrieves information from multiple sources, including:**
+**A full-stack Retrieval-Augmented Generation (RAG) system for querying BAJA SAE rulebooks and technical research documents using natural language.**
 
 
 
-**\* BAJA SAE rulebook**
-
-**\* Research paper: https://arxiv.org/pdf/2108.05877**
-
-
-
-**A user can ask questions like "What are the safety rules in BAJA?" and receive:**
-
-
-
-**\* A grounded answer generated from retrieved context**
-
-**\* Labeled source references (Chunk 1, Chunk 2, etc.)**
-
-**\* A retrieval score indicating relevance**
+**Built with FastAPI, React, ChromaDB, and a local LLM via Ollama, this system delivers grounded, source-aware answers with traceable retrieval.**
 
 
 
@@ -56,85 +40,31 @@
 
 
 
-**Features**
+**##  Overview**
 
 
 
-**\* Natural language search over PDFs**
-
-**\* Local inference using Ollama (phi3)**
-
-**\* Source-aware answers with retrieved document chunks**
-
-**\* Retrieval score for relevance**
-
-**\* Fast semantic retrieval using ChromaDB**
-
-**\* Clean React UI with Tailwind CSS**
-
-**\* End-to-end RAG pipeline**
+**This project enables users to interact with complex technical documents like BAJA SAE rulebooks through simple natural language queries.**
 
 
 
-**---**
+**Instead of manually searching PDFs, users can ask:**
 
 
 
-**----**
+**> "What are the safety rules in BAJA?"**
 
 
 
-
-
-**Architecture**
-
-
-
-**User Query**
-
-**↓**
-
-**React Frontend**
-
-**↓**
-
-**FastAPI Backend (/query)**
-
-**↓**
-
-**Retriever (ChromaDB)**
-
-**↓**
-
-**Context Builder**
-
-**↓**
-
-**LLM (Ollama — phi3)**
-
-**↓**
-
-**Answer + Sources + Score**
+**and receive:**
 
 
 
+**-  Context-grounded answers**  
 
+**-  Source-referenced document chunks**  
 
-**How Retrieval Works**
-
-
-
-**\* Converts query into embeddings**
-
-**\* Retrieves top-k relevant chunks**
-
-**\* Labels chunks (Chunk 1, Chunk 2...)**
-
-**\* Generates answer using retrieved context**
-
-
-
-**This improves traceability and reduces hallucination.**
+**-  Retrieval relevance scores**  
 
 
 
@@ -142,19 +72,23 @@
 
 
 
-**Tech Stack**
+**## ⚙️ Key Features**
 
 
 
-**Backend: FastAPI, Python**
+**-  Semantic search over technical PDFs**  
 
-**Vector DB: ChromaDB**
+**-  Retrieval-Augmented Generation (RAG pipeline)**  
 
-**Embeddings: Sentence Transformers**
+**-  Source-aware answers with labeled chunks (Chunk 1, Chunk 2...)**  
 
-**LLM: Ollama (phi3)**
+**-  Retrieval scoring for transparency**  
 
-**Frontend: React (Vite), Tailwind CSS**
+**-  Fast vector search using ChromaDB**  
+
+**-  Clean and responsive React UI (Tailwind CSS)**  
+
+**-  Fully local LLM inference using Ollama (phi3)**  
 
 
 
@@ -162,33 +96,99 @@
 
 
 
-**Setup**
+**##  System Architecture**
 
 
 
-**Clone:**
+**---**
+
+
+
+**##  How It Works**
+
+
+
+**1. User submits a query**  
+
+**2. Query is converted into embeddings**  
+
+**3. Top-k relevant document chunks are retrieved**  
+
+**4. Chunks are labeled and structured**  
+
+**5. LLM generates an answer using retrieved context**  
+
+
+
+&#x20;**This ensures:**
+
+**- Reduced hallucination**  
+
+**- High traceability**  
+
+**- Explainable outputs**  
+
+
+
+**---**
+
+
+
+**##  Tech Stack**
+
+
+
+**\*\*Backend\*\***
+
+**- FastAPI (Python)**
+
+
+
+**\*\*Frontend\*\***
+
+**- React (Vite)**
+
+**- Tailwind CSS**
+
+
+
+**\*\*AI/ML\*\***
+
+**- Sentence Transformers (Embeddings)**
+
+**- ChromaDB (Vector Database)**
+
+**- Ollama (phi3 - Local LLM)**
+
+
+
+**---**
+
+
+
+**##  Setup Instructions**
+
+
+
+**### 1. Clone the repository**
+
+**```bash**
 
 **git clone https://github.com/rudranaresh0201/rag-assistant-.git**
 
 **cd rag-assistant-**
 
-
-
-**Backend:**
+**2. Backend setup**
 
 **pip install -r requirements.txt**
 
 **uvicorn api:app --reload**
 
-
-
-**LLM:**
+**3. Run LLM**
 
 **ollama run phi3**
 
-
-
-**Frontend:**
+**4. frontend setup**
 
 **cd frontend**
 
@@ -196,63 +196,65 @@
 
 **npm run dev**
 
-
-
-**Open:**
+**5. open in browser** 
 
 **http://localhost:5173**
 
 
 
-**---**
+
+
+**Example Query**
 
 
 
-**Example**
+**Input:**
 
 
 
-**Query: "What are safety rules in BAJA?"**
+**What are the safety rules in BAJA?**
 
 
 
-**Returns:**
+**Output:**
 
 
 
-**\* Generated answer**
+**Generated answer**
 
-**\* Source chunks**
+**Supporting document chunks**
 
-**\* Retrieval score**
+**Retrieval relevance score**
 
-
-
-**---**
+&#x20;
 
 
 
-**What's Next**
+**Future Improvements**
+
+**Cross-encoder reranking for better retrieval accuracy**
+
+**Multi-document upload support**
+
+**Deployment (Render + Vercel)**
+
+**Voice-based querying**
+
+**Response caching layer**
 
 
 
-**\* Deployment (Render + Vercel)**
 
-**\* Reranking (cross-encoder)**
 
-**\* Multi-document upload UI**
-
-**\* Voice querying**
-
-**\* Caching layer**
+**Author**
 
 
 
-**---**
-
-
-
-**Built by Rudra Naresh**
+**Rudra Naresh**
 
 **Electronics Engineering, VJTI**
+
+
+
+
 
