@@ -52,20 +52,19 @@
 
 
 
-**Tech stack**
+##  Tech Stack
+
 **Backend**
-**FastAPI (Python)**
+- FastAPI (Python)
 
 **Frontend**
-React (Vite)
-Tailwind CSS
-
-
+- React (Vite)
+- Tailwind CSS
 
 **AI / ML**
- Sentence Transformers (embeddings)
-ChromaDB (vector database)
- Ollama (phi3 - local LLM)
+- Sentence Transformers (embeddings)
+- ChromaDB (vector database)
+- Ollama (phi3 - local LLM)
 
 
 **Setup**
