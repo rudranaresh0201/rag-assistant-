@@ -9,19 +9,19 @@ A full-stack RAG-powered assistant that allows users to query documents using a 
 
 
 
-** Frontend**
+Frontend
 
 **<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/rag-frontend.png" width="800"/>**
 
 
 
-**Backend**
+Backend
 
 **<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/rag-backend.png" width="800"/>**
 
 
 
-** Retrieval**
+ Retrieval
 
 **<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/source-retrieval.png" width="800"/>**
 
