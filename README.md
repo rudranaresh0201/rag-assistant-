@@ -8,19 +8,19 @@
 
 
 
-**### Frontend**
+** Frontend**
 
 **<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/rag-frontend.png" width="800"/>**
 
 
 
-**### Backend**
+**Backend**
 
 **<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/rag-backend.png" width="800"/>**
 
 
 
-**### Retrieval**
+** Retrieval**
 
 **<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/source-retrieval.png" width="800"/>**
 
@@ -54,11 +54,11 @@
 
 
 
-**\* a context-based answer**
+**\ a context-based answer**
 
-**\* relevant document chunks**
+**\ relevant document chunks**
 
-**\* retrieval scores for transparency**
+**\retrieval scores for transparency**
 
 
 
@@ -70,15 +70,15 @@
 
 
 
-**\* User sends a query**
+**\ User sends a query**
 
-**\* Query is converted into embeddings**
+**\ Query is converted into embeddings**
 
-**\* Top relevant chunks are retrieved from the vector database**
+**\ Top relevant chunks are retrieved from the vector database**
 
-**\* These chunks are passed to the LLM**
+**\These chunks are passed to the LLM**
 
-**\* The LLM generates a grounded answer**
+**\ The LLM generates a grounded answer**
 
 
 
@@ -91,36 +91,19 @@
 
 
 **Tech stack**
-
-
-
 **Backend**
-
-
-
-**\* FastAPI (Python)**
-
-
+**\FastAPI (Python)**
 
 **Frontend**
-
-
-
-**\* React (Vite)**
-
-**\* Tailwind CSS**
+**\ React (Vite)**
+**\Tailwind CSS**
 
 
 
 **AI / ML**
-
-
-
-**\* Sentence Transformers (embeddings)**
-
-**\* ChromaDB (vector database)**
-
-**\* Ollama (phi3 - local LLM)**
+**\ Sentence Transformers (embeddings)**
+**\ ChromaDB (vector database)**
+**\ Ollama (phi3 - local LLM)**
 
 
 
@@ -135,92 +118,43 @@
 **1. Clone the repo**
 
 &#x20;  **git clone https://github.com/rudranaresh0201/rag-assistant-.git**
-
 &#x20;  **cd rag-assistant-**
-
-
 
 **2. Backend**
 
 &#x20;  **pip install -r requirements.txt**
-
 &#x20;  **uvicorn api:app --reload**
 
-
-
 **3. Run LLM**
-
 &#x20;  **ollama run phi3**
 
-
-
 **4. Frontend**
-
 &#x20;  **cd frontend**
-
 &#x20;  **npm install**
-
 &#x20;  **npm run dev**
 
-
-
 **5. Open**
-
 &#x20;  **http://localhost:5173**
-
-
-
 
 
 **Example**
 
-
-
 **Input**
-
 **What are the safety rules in BAJA?**
 
-
-
 **Output**
-
-
-
-**\* Generated answer**
-
-**\* Supporting document chunks**
-
-**\* Retrieval scores**
-
-
-
-
-
-
+**\ Generated answer**
+**\Supporting document chunks**
+**\Retrieval scores**
 
 **Future improvements**
-
-
-
-**\* Better retrieval (reranking)**
-
-**\* Multi-document support**
-
-**\* Deployment (Render / Vercel)**
-
-**\* Voice input**
-
-**\* Caching**
-
-
-
-
+**\Better retrieval (reranking)**
+**\ Multi-document support**
+**\ Deployment (Render / Vercel)**
+**\ Voice input**
+**\Caching**
 
 **Author**
-
-
-
 **Rudra Naresh**
-
 **Electronics Engineering, VJTI**
 
