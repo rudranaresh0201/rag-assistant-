@@ -1,4 +1,5 @@
 **RAG Assistant**
+A full-stack RAG-powered assistant that allows users to query documents using a local LLM (phi3 via Ollama), ensuring privacy and fast responses.
 
 
 
@@ -42,15 +43,14 @@
 **retrieval scores for transparency**
 
 
-**How it works**
-**User sends a query**
-** Query is converted into embeddings**
-** Top relevant chunks are retrieved from the vector database**
-**These chunks are passed to the LLM**
-** The LLM generates a grounded answer**
-**This reduces hallucination and makes outputs more traceable.**
+##  How It Works
 
-
+1. Documents are uploaded and split into smaller chunks  
+2. Chunks are converted into embeddings using Sentence Transformers  
+3. Embeddings are stored in ChromaDB (vector database)  
+4. User query is embedded and matched with relevant chunks via similarity search  
+5. Ollama (phi3) generates context-aware answers using retrieved data  
+6. Final response is returned to the user through the frontend
 
 ##  Tech Stack
 
