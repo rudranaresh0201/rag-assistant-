@@ -4,27 +4,25 @@
 
 **BAJA RAG Assistant**
 
-
-
-**Frontend**
-
-**!\[Frontend](assets/screenshots/rag-frontend.png)**
+&#x20;**Demo**
 
 
 
-**Backend**
+**### Frontend**
 
-**!\[Backend](assets/screenshots/rag-backend.png)**
-
-
-
-**Source Retrieval**
-
-**!\[Source Retrieval](assets/screenshots/source-retrieval.png)**
+**<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/rag-frontend.png" width="800"/>**
 
 
 
+**### Backend**
 
+**<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/rag-backend.png" width="800"/>**
+
+
+
+**### Retrieval**
+
+**<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/source-retrieval.png" width="800"/>**
 
 
 
@@ -225,6 +223,4 @@
 **Rudra Naresh**
 
 **Electronics Engineering, VJTI**
-
-
 
