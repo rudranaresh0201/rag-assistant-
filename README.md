@@ -146,15 +146,14 @@ npm run dev
 http://localhost:5173
 ```
 
----
 
-##  Example
 
-#Input
+ Example
 
-```
+Input
+
+
 What are the safety rules in BAJA?
-```
 
 Output
 
@@ -162,7 +161,7 @@ Output
 * Supporting document chunks
 * Retrieval similarity scores
 
----
+
 
  Future Improvements
 
@@ -171,7 +170,7 @@ Output
 - Streaming responses
 - Multi-document support
 
----
+
 
  Author
 
