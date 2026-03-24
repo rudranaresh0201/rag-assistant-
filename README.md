@@ -119,11 +119,17 @@ The answer is displayed to the user (along with sources if implemented).
 
 ##  Tech Stack
 
-Frontend: React  
-Backend: FastAPI  
-Embeddings: (mention model)  
-Vector DB: (FAISS / Chroma etc)  
-LLM: (OpenAI / local / etc)
+Embeddings: sentence-transformers (all-MiniLM-L6-v2)
+Vector DB: ChromaDB
+LLM: Ollama (phi3)
+
+
+## Evaluation
+
+- Tested on sample BAJA rulebook queries  
+- Measured relevance of retrieved chunks  
+- Observed improved factual accuracy vs naive LLM responses
+
 
 
 
