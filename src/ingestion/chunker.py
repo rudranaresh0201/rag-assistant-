@@ -26,7 +26,6 @@ from src.types import Document
 logger = logging.getLogger(__name__)
 
 
-# ── Core splitting function ───────────────────────────────────────────────────
 
 def split_into_chunks(
     text: str,
@@ -66,7 +65,6 @@ def split_into_chunks(
     return chunks
 
 
-# ── Document-level chunker ────────────────────────────────────────────────────
 
 def chunk_document(
     document: Document,
@@ -111,7 +109,7 @@ def chunk_document(
     ]
 
 
-# ── Batch chunker ─────────────────────────────────────────────────────────────
+
 
 def chunk_documents(
     documents: list[Document],

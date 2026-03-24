@@ -4,11 +4,11 @@ import requests
 st.set_page_config(page_title="RAG Assistant", layout="wide")
 
 # 🔥 Header
-st.title("🤖 RAG Document Assistant")
+st.title(" RAG Document Assistant")
 st.caption("Ask questions about your documents and get answers with sources")
 
 # Sidebar settings
-st.sidebar.header("⚙️ Settings")
+st.sidebar.header(" Settings")
 top_k = st.sidebar.slider("Top K Retrieval", 1, 10, 3)
 show_debug = st.sidebar.checkbox("Show Debug Info", value=False)
 
@@ -22,7 +22,7 @@ for msg in st.session_state.messages:
         st.markdown(msg["content"])
 
 # Input
-query = st.chat_input("💬 Ask something about your documents...")
+query = st.chat_input(" Ask something about your documents...")
 
 if query:
     # Show user message
@@ -40,13 +40,13 @@ if query:
                     timeout=60
                 )
 
-                # 🔥 Backend status check
+                #  Backend status check
                 if response.status_code != 200:
                     st.error(f"Backend error: {response.status_code}")
                     st.write(response.text)
                     st.stop()
 
-                # 🔥 Safe JSON parsing
+                #  Safe JSON parsing
                 try:
                     data = response.json()
                 except Exception:
@@ -59,22 +59,22 @@ if query:
                 sources = data.get("sources", [])
                 confidence = data.get("confidence", 0)
 
-                # 🔥 Answer section
+                #  Answer section
                 st.divider()
                 st.markdown("### 🤖 Answer")
                 st.info(answer)
 
-                # 🔥 Confidence (cleaner)
+                #  Confidence (cleaner)
                 conf = int(min(max(confidence, 0), 1) * 100)
                 st.markdown(f"**Confidence:** {conf}%")
                 st.progress(conf / 100)
 
-                # 🔥 Sources (collapsible)
+                #  Sources (collapsible)
                 if sources:
-                    st.markdown("## 📚 Sources")
+                    st.markdown("##  Sources")
 
                     for i, src in enumerate(sources):
-                        with st.expander(f"📄 Source {i+1} — {src.get('document', 'Unknown')}"):
+                        with st.expander(f" Source {i+1} — {src.get('document', 'Unknown')}"):
                             st.code(src.get("content", ""), language="text")
 
                 # Debug info

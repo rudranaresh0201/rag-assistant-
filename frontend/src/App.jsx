@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import axios from "axios";
 import ChatBubble from "./components/ChatBubble";
 
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "http://localhost:8001").replace(/\/$/, "");
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8003").replace(/\/$/, "");
 const QUERY_ENDPOINT = `${API_BASE_URL}/query`;
 
 function App() {

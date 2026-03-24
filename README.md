@@ -1,112 +1,154 @@
-**RAG Assistant**
-A full-stack RAG-powered assistant that allows users to query documents using a local LLM (phi3 via Ollama), ensuring privacy and fast responses.
+# RAG Assistant – BAJA Rulebook QA System
+
+##  Demo
+
+### Frontend
+
+<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/frontend-output.png" width="800"/>
+
+<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/backend-output.png" width="800"/>
+
+<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/source-retrieval.png" width="800"/>
 
 
+##  Overview
 
-**BAJA RAG Assistant**
+This is a **full-stack Retrieval-Augmented Generation (RAG) system** designed to query **BAJA SAE rulebooks and technical documents** using natural language.
 
-&#x20;**Demo**
+Instead of manually searching through PDFs, users can simply ask questions like:
 
+ *“What are the safety rules in BAJA?”*
 
+The system returns:
 
-Frontend
+*  Context-aware answers
+*  Relevant document chunks (sources)
+*  Retrieval scores for transparency
 
-**<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/rag-frontend.png" width="800"/>**
+All answers are **grounded in actual document data**, reducing hallucination.
 
-
-
-Backend
-
-**<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/rag-backend.png" width="800"/>**
-
-
-
- Retrieval
-
-**<img src="https://raw.githubusercontent.com/rudranaresh0201/rag-assistant-/main/assets/screenshots/source-retrieval.png" width="800"/>**
-
-
-
-**This is a full-stack Retrieval-Augmented Generation (RAG) system for querying BAJA SAE rulebooks and technical documents using natural language.**
-
-**Built using FastAPI, React, ChromaDB, and a local LLM (phi3 via Ollama), it gives answers grounded in actual document content instead of guessing.**
-
-
-
-
-**Overview**
-**The idea is simple: instead of manually searching PDFs, you can just ask a question like:**
-**"What are the safety rules in BAJA?"**
-**and the system will return:**
-** a context-based answer**
-** relevant document chunks**
-**retrieval scores for transparency**
 
 
 ##  How It Works
 
-1. Documents are uploaded and split into smaller chunks  
-2. Chunks are converted into embeddings using Sentence Transformers  
-3. Embeddings are stored in ChromaDB (vector database)  
-4. User query is embedded and matched with relevant chunks via similarity search  
-5. Ollama (phi3) generates context-aware answers using retrieved data  
-6. Final response is returned to the user through the frontend
+1. **Document Processing**
+
+   * Rulebook PDFs are cleaned and split into structured chunks (sections/paragraphs)
+
+2. **Embedding Generation**
+
+   * Each chunk is converted into a vector using **Sentence Transformers**
+
+3. **Vector Storage**
+
+   * Embeddings are stored in **ChromaDB** for efficient similarity search
+
+4. **Query Processing**
+
+   * User query is embedded into the same vector space
+
+5. **Retrieval**
+
+   * Top-k relevant chunks are retrieved based on semantic similarity
+
+6. **Response Generation**
+
+   * Retrieved context is passed to **Ollama (phi3)** to generate a grounded answer
+
+7. **Frontend Display**
+
+   * Final output includes:
+
+     * Generated answer
+     * Source chunks
+     * Similarity scores
+
+
 
 ##  Tech Stack
 
-**Backend**
-- FastAPI (Python)
+### Backend
 
-**Frontend**
-- React (Vite)
-- Tailwind CSS
+* FastAPI (Python)
 
-**AI / ML**
-- Sentence Transformers (embeddings)
-- ChromaDB (vector database)
-- Ollama (phi3 - local LLM)
+### Frontend
 
+* React (Vite)
+* Tailwind CSS
 
-**Setup**
-**1. Clone the repo**
-&#x20;  **git clone https://github.com/rudranaresh0201/rag-assistant-.git**
-&#x20;  **cd rag-assistant-**
+### AI / ML
 
-**2. Backend**
-&#x20;  **pip install -r requirements.txt**
-&#x20;  **uvicorn api:app --reload**
-
-**3. Run LLM**
-&#x20;  **ollama run phi3**
-
-**4. Frontend**
-&#x20;  **cd frontend**
-&#x20;  **npm install**
-&#x20;  **npm run dev**
-
-**5. Open**
-&#x20;  **http://localhost:5173**
+* Sentence Transformers (Embeddings)
+* ChromaDB (Vector Database)
+* Ollama (phi3 – Local LLM)
 
 
-**Example**
 
-**Input**
-**What are the safety rules in BAJA?**
+##  Setup
 
+### 1. Clone Repository
 
-**Output**
- Generated answer
-Supporting document chunks
-Retrieval scores
+```
+git clone https://github.com/rudranaresh0201/rag-assistant-.git
+cd rag-assistant-
+```
 
-**Future improvements**
-Better retrieval (reranking)
- Multi-document support
- Deployment (Render / Vercel)
- Voice input
-Caching
+### 2. Backend
 
-**Author**
+```
+pip install -r requirements.txt
+uvicorn api:app --reload
+```
+
+### 3. Run Local LLM
+
+```
+ollama run phi3
+```
+
+### 4. Frontend
+
+```
+cd frontend
+npm install
+npm run dev
+```
+
+### 5. Open in Browser
+
+```
+http://localhost:5173
+```
+
+---
+
+##  Example
+
+### Input
+
+```
+What are the safety rules in BAJA?
+```
+
+### Output
+
+* Generated answer
+* Supporting document chunks
+* Retrieval similarity scores
+
+---
+
+##  Future Improvements
+
+* Better retrieval (reranking models)
+* Multi-document support
+* Deployment (Render / Vercel)
+* Voice input integration
+* Caching for faster responses
+
+---
+
+##  Author
+
 **Rudra Naresh**
-**Electronics Engineering, VJTI**
-
+Electronics Engineering, VJTI
