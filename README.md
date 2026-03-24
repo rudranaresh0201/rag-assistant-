@@ -28,6 +28,15 @@ The system returns:
 All answers are **grounded in actual document data**, reducing hallucination.
 
 
+##  Why this project?
+
+Traditional chatbots hallucinate due to lack of context.
+This system uses Retrieval-Augmented Generation (RAG) to:
+- Ground responses in real documents
+- Improve factual accuracy
+- Provide source-backed answers
+
+
 
 ##  How It Works
 
@@ -71,13 +80,14 @@ ARCHITECTURE DIAGRAM
 
 
 ![Architecture Diagram](assets/screenshots/mermaid-diagram.png)
-The system follows a Retrieval-Augmented Generation (RAG) pipeline:
 
-1. User query is sent from the frontend
-2. Backend processes the query
-3. Relevant chunks are retrieved using embeddings
-4. Context is passed to the LLM
-5. Response is generated and returned to the user
+## System Flow
+
+1. User enters query in frontend
+2. Backend converts query → embedding
+3. Vector DB retrieves relevant chunks
+4. Context + query sent to LLM
+5. Response returned with sources
 
 
 SYSTEM FLOW
@@ -109,48 +119,22 @@ The answer is displayed to the user (along with sources if implemented).
 
 ##  Tech Stack
 
-### Backend
+Frontend: React  
+Backend: FastAPI  
+Embeddings: (mention model)  
+Vector DB: (FAISS / Chroma etc)  
+LLM: (OpenAI / local / etc)
 
-* FastAPI (Python)
+
+
+##  Setup Instructions
+
+### Backend
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
 
 ### Frontend
-
-* React (Vite)
-* Tailwind CSS
-
-### AI / ML
-
-* Sentence Transformers (Embeddings)
-* ChromaDB (Vector Database)
-* Ollama (phi3 – Local LLM)
-
-
-
-##  Setup
-
-### 1. Clone Repository
-
-```
-git clone https://github.com/rudranaresh0201/rag-assistant-.git
-cd rag-assistant-
-```
-
-### 2. Backend
-
-```
-pip install -r requirements.txt
-uvicorn api:app --reload
-```
-
-### 3. Run Local LLM
-
-```
-ollama run phi3
-```
-
-### 4. Frontend
-
-```
 cd frontend
 npm install
 npm run dev
@@ -182,11 +166,10 @@ What are the safety rules in BAJA?
 
 ##  Future Improvements
 
-* Better retrieval (reranking models)
-* Multi-document support
-* Deployment (Render / Vercel)
-* Voice input integration
-* Caching for faster responses
+- Better chunking strategies
+- Hybrid search (BM25 + embeddings)
+- Streaming responses
+- Multi-document support
 
 ---
 
