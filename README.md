@@ -150,13 +150,13 @@ http://localhost:5173
 
 ##  Example
 
-### Input
+#Input
 
 ```
 What are the safety rules in BAJA?
 ```
 
-### Output
+Output
 
 * Generated answer
 * Supporting document chunks
@@ -164,7 +164,7 @@ What are the safety rules in BAJA?
 
 ---
 
-##  Future Improvements
+ Future Improvements
 
 - Better chunking strategies
 - Hybrid search (BM25 + embeddings)
@@ -173,7 +173,7 @@ What are the safety rules in BAJA?
 
 ---
 
-##  Author
+ Author
 
 **Rudra Naresh**
 Electronics Engineering, VJTI
