@@ -65,6 +65,48 @@ All answers are **grounded in actual document data**, reducing hallucination.
 
 
 
+ARCHITECTURE DIAGRAM
+
+
+
+
+![Architecture Diagram](assets/screenshots/mermaid-diagram.png)
+The system follows a Retrieval-Augmented Generation (RAG) pipeline:
+
+1. User query is sent from the frontend
+2. Backend processes the query
+3. Relevant chunks are retrieved using embeddings
+4. Context is passed to the LLM
+5. Response is generated and returned to the user
+
+
+SYSTEM FLOW
+
+Step 1: User Query
+The user enters a query through the frontend interface.
+
+Step 2: Query Processing
+The backend receives the query via an API call.
+The query is converted into vector embeddings using an embedding model.
+
+Step 3: Retrieval
+The generated embedding is compared with stored document embeddings in the vector database.
+Top-K most relevant chunks are retrieved based on similarity.
+
+Step 4: Context Construction
+The retrieved chunks are combined with the original query.
+A structured prompt is created to guide the language model.
+
+Step 5: Response Generation
+The prompt is passed to the language model (LLM).
+The model generates a context-aware response using the retrieved information.
+
+Step 6: Response Delivery
+The generated response is sent back to the frontend.
+The answer is displayed to the user (along with sources if implemented).
+
+
+
 ##  Tech Stack
 
 ### Backend
